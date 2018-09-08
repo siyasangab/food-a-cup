@@ -1,0 +1,39 @@
+{
+  "name": "canteen_web",
+  "version": "1.0.0",
+  "description": "Canteen online ordering app",
+  "author": "Siya",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^2.5.0",
+    "axios": "^0.18.0",
+    "cookie-universal-nuxt": "^2.0.5",
+    "js-cookie": "^2.2.0",
+    "nuxt": "^1.0.0",
+    "nuxt-google-maps-module": "^1.6.0",
+    "popper.js": "^1.14.3",
+    "query-string": "^6.1.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-google-autocomplete": "^1.1.0",
+    "vue-material": "^1.0.0-beta-10.2",
+    "vuetify": "^1.1.13",
+    "vuex-persist": "^1.4.3",
+    "vuex-persistedstate": "^2.5.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}
