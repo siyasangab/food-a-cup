@@ -142,6 +142,10 @@ export const actions = {
         commit('setSelectedRestaurant', restaurant);
     },
 
+    getChatRooms({commit}) {
+        return api.chat.getRooms();
+    },
+
     getMenu({commit}, slug) {
         return api.restaurants.getMenu(slug);
     },

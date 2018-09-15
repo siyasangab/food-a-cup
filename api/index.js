@@ -20,8 +20,18 @@ export default {
     },
 
     restaurants: {
-        find: (query) => axios.get(`${baseURL}restaurants/search/?q=${query}`),
         getMenu: (slug) => axios.get(`${baseURL}restaurants/${slug}/menu/`),
         findWithinRadius: (lat, lng) => axios.get(`${baseURL}restaurants/location/?lat=${lat}&lng=${lng}`)
+    },
+
+    orders: {
+        create: (data) => axios.post(`${baseURL}order/create/`, data),
+        get: () => axios.get(`${baseURL}/orders/`),
+        update: (orderId, data) => axios.put(`${baseURL}orders/${orderId}/update/`, data),
+        cancel: (orderId) => axios.put(`${baseURL}/orders/${orderId}/cancel/`)
+    },
+
+    chat: {
+        getRooms: () => axios.get(`${baseURL}chatrooms/`)
     }
 }

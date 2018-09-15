@@ -10,6 +10,12 @@
                         Login
                     </v-btn>
                 </v-form>
+                <v-snackbar v-model="snackbar" color="error" :timeout="snackbarTimeOut" vertical >
+                    Incorrect email and password combination.
+                    <v-btn dark flat @click="snackbar = false">
+                        Close
+                    </v-btn>
+                </v-snackbar>
             </v-flex>
         </v-container>
     </v-layout>
@@ -27,7 +33,9 @@ export default {
         password: '',
         passwordRules: [
             v => !! v || 'Password is required'
-        ]
+        ],
+        snackbar: false,
+        snackbarTimeOut: 10000
     }),
 
     methods: {
@@ -40,7 +48,7 @@ export default {
                 const redirectUrl = this.$route.query.returnUrl || '/';
                 this.$router.replace(redirectUrl);
             }).catch((error) => {
-                //alert('Error ' + error.response.data.error_description);
+                this.snackbar = true;
             });
         }
     }

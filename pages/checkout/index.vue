@@ -9,11 +9,15 @@
                             View order
                         </v-btn>
                     </nuxt-link>
+                    <p>
+                    You personal information is <strong>safe</strong> with us. We do not store your payment details anywhere on our system.
+                </p>
                 </div>
+                
                 <br>
                 <h2>Delivery address</h2>
                 <v-form ref="checkoutForm" v-model="valid" lazy-validation>
-                    <v-text-field clearable="" name="input-7-1" label="Address" autofocus="" :value="$store.state.placeLongName"></v-text-field>
+                    <v-text-field name="input-7-1" label="Address" autofocus="" :value="$store.state.placeLongName" disabled=""></v-text-field>
                 </v-form>
                 <v-form ref="checkoutForm" v-model="valid" lazy-validation>
                     <v-text-field name="input-7-1">
